@@ -1,0 +1,170 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<script src="~/js/Angularjs/angular.min.js"></script>
+<script src="~/js/Angularjs/angular-sanitize.min.js"></script>
+<script src="~/js/uiselect/select.min.js"></script>
+<link rel="stylesheet" href="~/css/uiselect/select.min.css">
+<script src="~/js/DataTable/ui-bootstrap-tpls.min.js"></script>
+<script src="~/js/Angularjs/angular-ui-utils.min.js"></script>
+<script src="~/js/DataTable/dataTables.min.js"></script>
+<link rel="stylesheet" href="~/css/datatable/dataTables.min.css">
+<script src="~/js/DataTable/dataTables.bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+
+<script src="~/js/House/Index.js"></script>
+
+<style>
+    .select2 > .select2-choice.ui-select-match {
+        /* Because of the inclusion of Bootstrap */
+        height: 29px;
+    }
+
+    .selectize-control > .selectize-dropdown {
+        top: 36px;
+    }
+    /* Some additional styling to demonstrate that append-to-body helps achieve the proper z-index layering. */
+    .select-box {
+        background: #fff;
+        position: relative;
+        z-index: 1;
+    }
+
+    .alert-info.positioned {
+        margin-top: 1em;
+        position: relative;
+        z-index: 10000; /* The select2 dropdown has a z-index of 9999 */
+    }
+
+    .select2-container--default .select2-selection--multiple {
+        border-radius: 0px !important;
+        border: 1px solid #d2d6de !important;
+        height: 31px !important;
+    }
+
+    .select2 select2-container select2-container--default {
+        width: 100%;
+    }
+
+    .select2-container--default .select2-selection--multiple .select2-selection__choice {
+        color: black;
+    }
+
+    ui-select-match + .select2-search-field,
+    .ui-select-match + .select2-search-field input {
+        width: 100% !important;
+    }
+</style>
+
+<div ng-app="houseIndex" ng-controller="formController as ctrl"
+     ng-init="init(
+    @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["House"])
+     )" class="ng-cloak">
+    <div asp-validation-summary="None"></div>
+    <div class="box">
+        <div class="box-header with-border">
+
+            <button type="button" class="btn btn-primary" ng-click="onClickAddModal()">Add</button>
+
+            <table class="table table-fixed table-striped table-bordered datatable"
+                   ui-jq="dataTable" ui-options="dataTableOpt">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Street</th>
+                        <th>SquareFootage</th>
+                        <th>Remarks</th>
+                        <th>RentAmount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in HouseList.records">
+                        <td>{{ data.Name }}</td>
+                        <td>{{ data.Address }}</td>
+                        <td>{{ data.Street }}</td>
+                        <td>{{ data.SquareFootage }}</td>
+                        <td>{{ data.Remarks }}</td>
+                        <td>{{ data.RentAmount }}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" ng-click="ShowEdit(data.Id)">Edit</button>
+                            <button type="button" class="btn btn-danger" ng-click="Delete(data.Id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add House</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <label class="col-form-label">Name :</label>
+                            <input class="form-control" ng-model="House.Name" placeholder="Name" autocomplete="off" />
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Address:</label>
+                            <input type="text" class="form-control" ng-model="House.Address" placeholder="Address" autocomplete="off" />
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Postal Code:</label>
+                            <input type="text" class="form-control" ng-model="House.PostalCode" placeholder="Postal Code" autocomplete="off" ng-change="onLoadStreet()" />
+                            @*                            <button class="btn btn-primary" ng-click="onLoadStreet()">Load</button>
+                            *@
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Street:</label>
+                            <ui-select theme="bootstrap" ng-model="House.Street.selected" close-on-select="true" style="width: 300px;">
+                                <ui-select-match placeholder="Select a Street">
+                                    {{$select.selected.line_1}}
+                                </ui-select-match>
+                                <ui-select-choices repeat="p1 in (StreetList | filter: $select.search) track by p1.line_1">
+                                    <span ng-bind="p1.line_1"></span>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Rent Amount:</label>
+                            <input type="number" class="form-control" ng-model="House.RentAmount" placeholder="Amount" autocomplete="off" />
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Square Footage:</label>
+                            <input type="text" class="form-control" ng-model="House.SquareFootage" placeholder="SquareFootage" autocomplete="off" />
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="control-label">Room :</label>
+                            <ui-select multiple theme="bootstrap" ng-model="Multiple.rooms" close-on-select="false" style="width: 300px;">
+                                <ui-select-match placeholder="Select a Room">
+                                    {{$item.RoomNo}}
+                                </ui-select-match>
+                                <ui-select-choices repeat="p1 in (RoomList | filter: $select.search) track by p1.Id">
+                                    <span ng-bind="p1.RoomNo"></span>
+                                </ui-select-choices>
+                        </div>
+
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Remarks:</label>
+                            <textarea class="form-control" ng-model="House.Remarks" rows="2"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" ng-click="onClickAdd()">Save</button>
+                        <button type="button" class="btn btn-secondary" ng-click="onClickCloseModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

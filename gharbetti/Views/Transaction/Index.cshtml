@@ -1,0 +1,148 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<script src="~/js/datepicker/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="~/css/datepicker/bootstrap-datepicker3.min.css">
+<script src="~/js/Angularjs/angular.min.js"></script>
+<script src="~/js/DataTable/ui-bootstrap-tpls.min.js"></script>
+<script src="~/js/Angularjs/angular-ui-utils.min.js"></script>
+<script src="~/js/DataTable/dataTables.min.js"></script>
+<script src="~/js/DataTable/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" href="~/css/datatable/dataTables.min.css">
+<script src="~/js/Transaction/Index.js"></script>
+
+
+<div ng-app="transactionIndex" ng-controller="transactionController as ctrl"
+     ng-init="init(
+    @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["Transaction"]),
+    @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["RentAmount"])
+     )" class="ng-cloak">
+    <div asp-validation-summary="None"></div>
+    <div class="box">
+        <div class="box-header with-border">
+
+            <button type="button" class="btn btn-primary" ng-click="onClickAddModal()">Add</button>
+
+            <table class="table table-fixed table-striped table-bordered datatable"
+                   ui-jq="dataTable" ui-options="dataTableOpt">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>TransactionDate</th>
+                        <th>Remarks</th>
+                        <th>PaymentMode</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in TransactionList.records">
+                        <td>{{ data.StartDateString }}</td>
+                        <td>{{ data.EndDateString }}</td>
+                        <td>{{ data.TransactionDateString }}</td>
+                        <td>{{ data.Remarks }}</td>
+                        <td>{{ data.PaymentMode }}</td>
+                        <td>{{ data.Total }}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" ng-click="ShowEdit(data.Id)">Edit</button>
+                            <button type="button" class="btn btn-danger" ng-click="Delete(data.Id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+          
+
+        </div>
+        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Transaction</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Start Date:</label>
+                            <input type="text" id="modalStartDate" class="form-control datepicker" ng-model="Transaction.StartDateString" placeholder="Start Date" autocomplete="off" />
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">End Date:</label>
+                            <input type="text" id="modalEndDate" class="form-control datepicker" ng-model="Transaction.EndDateString" placeholder="End Date" autocomplete="off" />
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Transaction Date:</label>
+                            <input type="text" id="modalTransactionDate" class="form-control datepicker" ng-model="Transaction.TransactionDateString"  autocomplete="off" />
+                        </div>
+
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Rent Amount:</label>
+                            <input type="number" class="form-control" ng-model="Transaction.RentAmount" ng-disabled="true" autocomplete="off" />
+                        </div>
+
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Rent Paid:</label>
+                            <input type="number" class="form-control" ng-model="Transaction.RentPaid" placeholder="Amount" autocomplete="off" />
+                        </div>
+
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Payment mode:</label>
+                            <select class="form-control"
+                                    ng-model="Transaction.PaymentModeId"
+                                    ng-options="bd.Name for bd in PaymentModeList">
+                                <option selected>Select</option>
+                                </select>
+                        </div>
+                        
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Remarks:</label>
+                            <textarea class="form-control" ng-model="Transaction.Remarks" rows="2"></textarea>
+                        </div>
+
+
+
+                        <table class="table">
+                            <button type="button" class="btn btn-primary" ng-click="onAddRoomType()">Add</button>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>ExpenseType</th>
+                                    <th>Amount</th>
+                                    <th>Remarks</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="data in Transaction.TransactionDetails">
+                                    <th scope="row">{{$index + 1}}</th>
+                                    <td>
+                                        <select class="form-control"
+                                                ng-model="data.ExpenseId"
+                                                ng-options="bd.Name for bd in ExpenseType">
+                                            <option selected>Select</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control" ng-model="data.Amount" placeholder="Amount" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="data.Remarks" placeholder="Remarks" autocomplete="off" />
+                                    </td>
+                                    <td><button type="button" class="btn btn-danger" ng-click="onRemoveRow($index)">Remove</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" ng-click="onClickAdd()">Send</button>
+                        <button type="button" class="btn btn-secondary" ng-click="onClickCloseModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

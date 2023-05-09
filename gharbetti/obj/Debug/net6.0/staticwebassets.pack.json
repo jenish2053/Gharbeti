@@ -1,0 +1,561 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Gharbetti.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Gharbetti.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\css\\DataTable\\dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTable\\dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\css\\angular-csp.css",
+      "PackagePath": "staticwebassets\\css\\angular-csp.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\css\\angular-csp.min.css",
+      "PackagePath": "staticwebassets\\css\\angular-csp.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\css\\datepicker\\bootstrap-datepicker3.min.css",
+      "PackagePath": "staticwebassets\\css\\datepicker\\bootstrap-datepicker3.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\css\\select2\\select2.min.css",
+      "PackagePath": "staticwebassets\\css\\select2\\select2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\css\\uiselect\\select.min.css",
+      "PackagePath": "staticwebassets\\css\\uiselect\\select.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\image\\admin.png",
+      "PackagePath": "staticwebassets\\image\\admin.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\image\\login.jpg",
+      "PackagePath": "staticwebassets\\image\\login.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Angularjs\\angular-sanitize.min.js",
+      "PackagePath": "staticwebassets\\js\\Angularjs\\angular-sanitize.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Angularjs\\angular-ui-utils.min.js",
+      "PackagePath": "staticwebassets\\js\\Angularjs\\angular-ui-utils.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Angularjs\\angular.min.js",
+      "PackagePath": "staticwebassets\\js\\Angularjs\\angular.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Approve\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Approve\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\CleanSchedule\\Index.js",
+      "PackagePath": "staticwebassets\\js\\CleanSchedule\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Complain\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Complain\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\DataTable\\dataTables.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTable\\dataTables.bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\DataTable\\dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTable\\dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\DataTable\\ui-bootstrap-tpls.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTable\\ui-bootstrap-tpls.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\ExpenseType\\Index.js",
+      "PackagePath": "staticwebassets\\js\\ExpenseType\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Expense\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Expense\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Floor\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Floor\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\House\\Index.js",
+      "PackagePath": "staticwebassets\\js\\House\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Message\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Message\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\PaymentMode\\Index.js",
+      "PackagePath": "staticwebassets\\js\\PaymentMode\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\RoomType\\Index.js",
+      "PackagePath": "staticwebassets\\js\\RoomType\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Room\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Room\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\StripePayment\\Index.js",
+      "PackagePath": "staticwebassets\\js\\StripePayment\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Stripe\\stripe.min.js",
+      "PackagePath": "staticwebassets\\js\\Stripe\\stripe.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\Transaction\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Transaction\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\UserView\\Index.js",
+      "PackagePath": "staticwebassets\\js\\UserView\\Index.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\datepicker\\bootstrap-datepicker.min.js",
+      "PackagePath": "staticwebassets\\js\\datepicker\\bootstrap-datepicker.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\select2\\select2.min.js",
+      "PackagePath": "staticwebassets\\js\\select2\\select2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\js\\uiselect\\select.min.js",
+      "PackagePath": "staticwebassets\\js\\uiselect\\select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\6381338722693356791",
+      "PackagePath": "staticwebassets\\uploads"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\6381338732121682961",
+      "PackagePath": "staticwebassets\\uploads"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\6381338732121682962",
+      "PackagePath": "staticwebassets\\uploads"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\6381353845762753101.png",
+      "PackagePath": "staticwebassets\\uploads\\6381353845762753101.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\6381353845762753102.png",
+      "PackagePath": "staticwebassets\\uploads\\6381353845762753102.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\6381355711217857111.png",
+      "PackagePath": "staticwebassets\\uploads\\6381355711217857111.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\6381355711217857112.png",
+      "PackagePath": "staticwebassets\\uploads\\6381355711217857112.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638141342611079193.pdf",
+      "PackagePath": "staticwebassets\\uploads\\638141342611079193.pdf"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638142283244486607.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638142283244486607.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638142295438267802.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638142295438267802.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638142299433248568.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638142299433248568.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638142299722033526.png",
+      "PackagePath": "staticwebassets\\uploads\\638142299722033526.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638143351014242689.png",
+      "PackagePath": "staticwebassets\\uploads\\638143351014242689.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638143351014350865.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638143351014350865.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638156267059751885.png",
+      "PackagePath": "staticwebassets\\uploads\\638156267059751885.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638156267059882323.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638156267059882323.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638165026744149487.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638165026744149487.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638165026744245016.png",
+      "PackagePath": "staticwebassets\\uploads\\638165026744245016.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638180515491586922.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638180515491586922.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638180515491680362.png",
+      "PackagePath": "staticwebassets\\uploads\\638180515491680362.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184457502804275.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184457502804275.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184457503006208.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184457503006208.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184468409000104.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184468409000104.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184468409162661.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184468409162661.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184471531619959.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184471531619959.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184471531741355.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184471531741355.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184473133517877.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184473133517877.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184473133761271.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184473133761271.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184477234575901.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184477234575901.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184477234804480.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184477234804480.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184537096551136.PNG",
+      "PackagePath": "staticwebassets\\uploads\\638184537096551136.PNG"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184537096776803.JPG",
+      "PackagePath": "staticwebassets\\uploads\\638184537096776803.JPG"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184538601861954.PNG",
+      "PackagePath": "staticwebassets\\uploads\\638184538601861954.PNG"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184538601922193.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638184538601922193.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184540509387854.png",
+      "PackagePath": "staticwebassets\\uploads\\638184540509387854.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184540509423396.png",
+      "PackagePath": "staticwebassets\\uploads\\638184540509423396.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184562998091245.png",
+      "PackagePath": "staticwebassets\\uploads\\638184562998091245.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638184562998122711.png",
+      "PackagePath": "staticwebassets\\uploads\\638184562998122711.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638185712011278604.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638185712011278604.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638185712011359026.png",
+      "PackagePath": "staticwebassets\\uploads\\638185712011359026.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638185713510084302.jpg",
+      "PackagePath": "staticwebassets\\uploads\\638185713510084302.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\Gharbetti\\Gharbetti\\wwwroot\\uploads\\638185713510165959.png",
+      "PackagePath": "staticwebassets\\uploads\\638185713510165959.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Gharbetti.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Gharbetti.props",
+      "PackagePath": "build\\Gharbetti.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Gharbetti.props",
+      "PackagePath": "buildMultiTargeting\\Gharbetti.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Gharbetti.props",
+      "PackagePath": "buildTransitive\\Gharbetti.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

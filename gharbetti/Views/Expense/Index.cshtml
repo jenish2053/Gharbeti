@@ -1,0 +1,221 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<script src="~/js/datepicker/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="~/css/datepicker/bootstrap-datepicker3.min.css">
+<script src="~/js/Angularjs/angular.min.js"></script>
+<script src="~/js/Expense/Index.js"></script>
+
+
+<div ng-app="expenseIndex" ng-controller="expenseController as ctrl"
+     ng-init="init(
+        @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["CurrentRole"])
+)" class="ng-cloak">
+    <div asp-validation-summary="None"></div>
+    <div class="box">
+        <div class="box-header with-border">
+
+            <div ng-show="IsVisible.Admin">
+                <div class="col-md-2 form-group">
+                    <label class="col-form-label">Report Type:</label>
+                    <select class="form-control" ng-model="ReportType" ng-change="onChangeReportType()">
+                        <option value="0">Transaction Report</option>
+                        <option value="1">Status Report</option>
+                    </select>
+                </div>
+            </div>
+
+            <div ng-show="ReportType == '0'">
+                <div class="col-md-2 form-group">
+                    <label class="col-form-label">Filter Type:</label>
+                    <select class="form-control" ng-model="FilterData.FilterType" ng-change="onChangeFilterType()">
+                        <option value="0">Date Range</option>
+                        <option value="1">Month Range</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+            <div ng-hide="monthWise">
+                <div class="col-md-2 form-group">
+                    <label class="col-form-label">Months:</label>
+                    <select class="form-control" ng-model="FilterData.Month">
+                        <option value="0" selected>All</option>
+                        <option value="1">Jan</option>
+                        <option value="2">Feb</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Apr</option>
+                        <option value="5">May</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Aug</option>
+                        <option value="9">Sept</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select>
+                </div>
+                <div class="col-md-2 form-group">
+                    <label class="col-form-label">Year:</label>
+                    <select class="form-control" ng-model="FilterData.Year">
+                        <option value="2023" selected>2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+            </div>
+
+            <div ng-hide="filterRange">
+                <div class="col-md-2 form-group">
+                    <label class="col-form-label">Start Date:</label>
+                    <input type="text" id="modalStartDate" class="form-control datepicker" ng-model="FilterData.StartDateString" placeholder="Start Date" autocomplete="off" />
+                </div>
+                <div class="col-md-2 form-group">
+                    <label class="col-form-label">End Date:</label>
+                    <input type="text" id="modalEndDate" class="form-control datepicker" ng-model="FilterData.EndDateString" placeholder="End Date" autocomplete="off" />
+                </div>
+            </div>
+
+
+            <button type="button" style="margin-top : 25px;" class="btn btn-primary" ng-click="onClickFilter()">Load</button>
+
+            <div ng-show="IsVisible.Tenant">
+
+                <table class="table table-fixed table-striped table-bordered" id="transactionTable">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>TransactionDate</th>
+                            <th>Remarks</th>
+                            <th>PaymentMode</th>
+                            <th>Rent Paid</th>
+                            <th>Total</th>
+                            <th>Extra Expenses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="data in TransactionList">
+                            <td>{{ data.StartDateString }}</td>
+                            <td>{{ data.EndDateString }}</td>
+                            <td>{{ data.TransactionDateString }}</td>
+                            <td>{{ data.Remarks }}</td>
+                            <td>{{ data.PaymentMode }}</td>
+                            <td>{{ data.RentPaid }}</td>
+                            <td>{{ data.Total }}</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" ng-click="ShowExpense(data.Id)">View</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div ng-show="IsVisible.Admin">
+
+                <div ng-show="IsVisible.TransactionReport">
+
+                    <table class="table table-fixed table-striped table-bordered" id="transactionTable">
+                        <thead class="thead-dark">
+                            <tr>
+                                <td>House->Room</td>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>TransactionDate</th>
+                                <th>Remarks</th>
+                                <th>PaymentMode</th>
+                                <th>Rent Paid</th>
+                                <th>Total</th>
+                                <th>Extra Expenses</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in AdminTransactionList">
+                                <td>{{ data.House }}->{{data.Room}}</td>
+                                <td>{{ data.StartDateString }}</td>
+                                <td>{{ data.EndDateString }}</td>
+                                <td>{{ data.TransactionDateString }}</td>
+                                <td>{{ data.Remarks }}</td>
+                                <td>{{ data.PaymentMode }}</td>
+                                <td>{{ data.RentPaid }}</td>
+                                <td>{{ data.Total }}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" ng-click="ShowExpense(data.Id)">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div ng-show="IsVisible.RentReport">
+
+                    <table class="table table-fixed table-striped table-bordered" id="transactionTable">
+                        <thead class="thead-dark">
+                            <tr>
+                                <td>Tenant</td>
+                                <td>House</td>
+                                <th>Room</th>
+                                <th>Rent Amount</th>
+                                <th>Rent Paid</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in AdminRentList">
+                                <td>{{data.Tenant}}</td>
+                                <td>{{ data.House }}</td>
+                                <td>{{data.Room}}</td>
+                                <td>{{ data.RentAmount }}</td>
+                                <td>{{ data.RentPaid}}</td>
+                                <td>{{ data.Status }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Detail Transaction</h5>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Expense</th>
+                                    <th>Amount</th>
+                                    <th>Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="data in ExpenseDetail">
+                                    <th scope="row">{{$index + 1}}</th>
+                                    <td>
+                                        {{data.ExpenseId.Name}}
+                                    </td>
+                                    <td>
+                                        {{data.Amount}}
+                                    </td>
+                                    <td>
+                                        {{data.Remarks}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

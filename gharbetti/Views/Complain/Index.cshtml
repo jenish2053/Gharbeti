@@ -1,0 +1,95 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<script src="~/js/Angularjs/angular.min.js"></script>
+<script src="~/js/DataTable/ui-bootstrap-tpls.min.js"></script>
+<script src="~/js/Angularjs/angular-ui-utils.min.js"></script>
+<script src="~/js/DataTable/dataTables.min.js"></script>
+<script src="~/js/DataTable/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" href="~/css/datatable/dataTables.min.css">
+<script src="~/js/Complain/Index.js"></script>
+
+<div ng-app="complainIndex" ng-controller="formController as ctrl"
+     ng-init="init(
+    @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["Complain"])
+     )" ng-cloak>
+    <div asp-validation-summary="None"></div>
+    <div class="box">
+        <div class="box-header with-border">
+
+            @if (User.IsInRole("tenant"))
+            {
+                <button type="button" class="btn btn-primary" ng-click="onClickAddModal()">Add</button>
+            }
+
+            <table class="table table-fixed table-striped table-bordered datatable"
+                   ui-jq="dataTable" ui-options="dataTableOpt">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Tenant</th>
+                        <th>House & Room</th>
+                        <th>Complain Date</th>
+                        <th>Complain</th>
+                        <th>Response</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in ComplainList.records">
+                        <td>{{data.TenantName}}</td>
+                        <td>{{data.House}} => {{data.Room}}</td>
+                        <td>{{ data.ComplainDate | date:'MMMM d y, h:mm:ss a'}}</td>
+                        <td>{{ data.Reason }}</td>
+                        <td>{{ data.Response }}</td>
+                        <td>{{ data.Status == 0 ? 'Open' : (data.Status == 1 ? 'In-Progress' : 'Closed')  }}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" ng-click="ShowEdit(data.Id)">Edit</button>
+                            <button type="button" class="btn btn-danger" ng-click="Delete(data.Id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{ ComplainModalTitle }}</h5>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="grid text-center"></div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Reason :</label>
+                            <textarea type="text" class="form-control" ng-model="Complain.Reason" placeholder="Enter Complain" autocomplete="off"></textarea>
+                        </div>
+
+                        @if (User.IsInRole("admin"))
+                        {
+                            <div class="g-col-6 g-col-md-4">
+                                <label class="col-form-label">Response :</label>
+                                <textarea type="text" class="form-control" ng-model="Complain.Response" placeholder="Enter Response" autocomplete="off"></textarea>
+                            </div>
+                        }
+
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label" for="Status">Status :</label>
+                            <select name="Status" id="Status" class="form-control" ng-model="Complain.Status" ng-disabled="Complain.StatusDisabled"
+                                    ng-options="fl.Name for fl in StatusList">
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" ng-click="onClickAdd()">Save</button>
+                        <button type="button" class="btn btn-secondary" ng-click="onClickCloseModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

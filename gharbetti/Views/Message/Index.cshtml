@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+
+<script src="~/js/Angularjs/angular.min.js"></script>
+<script src="~/js/Angularjs/angular-sanitize.min.js"></script>
+<script src="~/js/uiselect/select.min.js"></script>
+<link rel="stylesheet" href="~/css/uiselect/select.min.css">
+<script src="~/js/DataTable/ui-bootstrap-tpls.min.js"></script>
+<script src="~/js/Angularjs/angular-ui-utils.min.js"></script>
+<script src="~/js/DataTable/dataTables.min.js"></script>
+<script src="~/js/DataTable/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" href="~/css/datatable/dataTables.min.css">
+<script src="~/js/Message/Index.js"></script>
+
+
+<div ng-app="messageIndex" ng-controller="messageController as ctrl"
+     ng-init="init(
+    @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["Message"])
+)" class="ng-cloak">
+    <div asp-validation-summary="None"></div>
+    <div class="box">
+        <div class="box-header with-border">
+
+            <button type="button" class="btn btn-primary" ng-click="onClickAddModal()">Add</button>
+
+            <table class="table table-fixed table-striped table-bordered datatable"
+                   ui-jq="dataTable" ui-options="dataTableOpt">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Subject</th>
+                        <th>Posted Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in MessageList.records">
+                        <td>{{ data.Subject }}</td>
+                        <td>{{ data.PostedDate }}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" ng-click="ShowMessage(data.Id)">View</button>
+                            <button type="button" class="btn btn-primary" ng-click="ShowEdit(data.Id)">Edit</button>
+                            <button type="button" class="btn btn-danger" ng-click="Delete(data.Id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Floor</h5>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="g-col-6 g-col-md-4">
+                        <label class="col-form-label">Send Type:</label>
+                         <select class="form-control" ng-model="Message.IsAll" ng-change="onChangeSendType()">
+                             <option value="0">All</option>
+                             <option value="1">Individual</option>
+                        </select>
+
+                    </div>
+
+                    <div class="g-col-6 g-col-md-4">
+                        <label class="col-form-label">House:</label>
+     
+
+                        <ui-select multiple theme="bootstrap" ng-model="Multiple.tenants" ng-disabled="DisableMultipleSelect" close-on-select="false" style="width: 300px;">
+                            <ui-select-match placeholder="Select a Tenant">
+                                {{$item.Tenant}}
+                            </ui-select-match>
+                            <ui-select-choices repeat="p1 in (HouseList | filter: $select.search) track by p1.Id">
+                                HR : {{p1.House}}=> {{p1.RoomNo}}
+                                <span ng-bind="p1.Tenant"></span>
+                            </ui-select-choices>
+
+                    </div>
+
+                    <div>
+                        <label class="control-label">Subject:</label>
+                        <input class="form-control" type="text" ng-model="Message.Subject" placeholder="Subject" />
+                    </div>
+                    <div>
+                        <label class="control-label">Body</label>
+                        <textarea class="form-control" ng-model="Message.Body" rows="4" cols="50"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" ng-click="onClickAdd()">Save</button>
+                    <button type="button" class="btn btn-secondary" ng-click="onClickCloseModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Message</h5>
+                </div>
+                <div class="modal-body">
+                    <p>{{BodyMessage}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

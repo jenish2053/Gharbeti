@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var remarks = ViewData["Remarks"] as string;
+    var role = ViewData["Role"] as string;
+}
+
+<script src="~/js/DataTable/dataTables.min.js"></script>
+<script src="~/js/DataTable/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" href="~/css/datatable/dataTables.min.css">
+
+
+<div class="text-center">
+    @if (!string.IsNullOrEmpty(role) && role == "pendingtenant" && !string.IsNullOrEmpty(remarks))
+    {
+        <h1 class="display-4">
+            @remarks
+        </h1>
+    }
+
+    @if (!string.IsNullOrEmpty(role) && role == "tenant")
+    {
+        <table class="display" id="ServiceHealth" name="ServiceHealth" style="width:95%">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Body</th>
+                    <th>Posted Date</th>
+                </tr>
+            </thead>
+        </table>
+    }
+
+    @if (!string.IsNullOrEmpty(role) && role == "admin")
+    {
+        <img src="~/image/admin.png" alt="Italian Trulli">
+    }
+
+    @if (string.IsNullOrEmpty(role))
+    {
+        <img src="~/image/login.jpg" alt="Italian Trulli">
+    }
+
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "/api/message/getmessage",
+            contentType: "application/json",
+            success: function (data) {
+                if (data.Status) {
+                    $('#ServiceHealth').DataTable({
+                        "data": data.Data,
+                        columns: [
+                            { data: 'Subject' },
+                            { data: 'Body' },
+                            { data: 'PostedDateString' },
+                        ],
+
+                    });
+                }
+            }
+        });
+    });
+
+</script>

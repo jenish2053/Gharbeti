@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<script src="~/js/Angularjs/angular.min.js"></script>
+<script src="~/js/DataTable/ui-bootstrap-tpls.min.js"></script>
+<script src="~/js/Angularjs/angular-ui-utils.min.js"></script>
+<script src="~/js/DataTable/dataTables.min.js"></script>
+<script src="~/js/DataTable/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" href="~/css/datatable/dataTables.min.css">
+<script src="~/js/PaymentMode/Index.js"></script>
+
+<div ng-app="paymentModeIndex" ng-controller="formController as ctrl"
+     ng-init="init(
+    @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["PaymentMode"])
+     )" ng-cloak>
+    <div asp-validation-summary="None"></div>
+    <div class="box">
+        <div class="box-header with-border">
+
+            <button type="button" class="btn btn-primary" ng-click="onClickAddModal()">Add</button>
+
+            <table class="table table-fixed table-striped table-bordered datatable"
+                   ui-jq="dataTable" ui-options="dataTableOpt">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in PaymentModeList.records">
+                        <td>{{ data.Name }}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" ng-click="ShowEdit(data.Id)">Edit</button>
+                            <button type="button" class="btn btn-danger" ng-click="Delete(data.Id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Expense</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <label class="col-form-label">Name :</label>
+                            <input class="form-control" ng-model="PaymentMode.Name" placeholder="Name" autocomplete="off" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" ng-click="onClickAdd()">Save</button>
+                        <button type="button" class="btn btn-secondary" ng-click="onClickCloseModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

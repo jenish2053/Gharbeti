@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<script src="~/js/Angularjs/angular.min.js"></script>
+<script src="~/js/DataTable/ui-bootstrap-tpls.min.js"></script>
+<script src="~/js/Angularjs/angular-ui-utils.min.js"></script>
+<script src="~/js/DataTable/dataTables.min.js"></script>
+<script src="~/js/DataTable/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" href="~/css/datatable/dataTables.min.css">
+<script src="~/js/Room/Index.js"></script>
+
+<div ng-app="roomIndex" ng-controller="formController as ctrl"
+     ng-init="init(
+    @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["Room"])
+     )" ng-cloak>
+    <div asp-validation-summary="None"></div>
+    <div class="box">
+        <div class="box-header with-border">
+
+            <button type="button" class="btn btn-primary" ng-click="onClickAddModal()">Add</button>
+
+            <table class="table table-fixed table-striped table-bordered datatable"
+                   ui-jq="dataTable" ui-options="dataTableOpt">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in RoomList.records">
+                        <td>{{ data.RoomNo }}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" ng-click="ShowEdit(data.Id)">Edit</button>
+                            <button type="button" class="btn btn-danger" ng-click="Delete(data.Id)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{ RoomModalTitle }}</h5>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="grid text-center"></div> 
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">RoomNo :</label>
+                            <input type="text" class="form-control" ng-model="Room.RoomNo" placeholder="Name" autocomplete="off" />
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Floor :</label>
+                            <select name="Reason" class="form-control" ng-model="Room.FloorId"
+                                    ng-options="fl.Name for fl in FloorType">
+                                <option selected>Select Floor</option>
+                            </select>
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Rent Amount:</label>
+                            <input type="number" class="form-control" ng-model="Room.RentAmount" placeholder="Amount" autocomplete="off" />
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Square Footage:</label>
+                            <input type="text" class="form-control" ng-model="Room.SquareFootage" placeholder="SquareFootage" autocomplete="off" />
+                        </div>
+                        <div class="g-col-6 g-col-md-4">
+                            <label class="col-form-label">Remarks:</label>
+                            <textarea class="form-control" ng-model="Room.Remarks" rows="2"></textarea>
+                        </div>
+
+                        <table class="table">
+                                <button type="button" class="btn btn-primary" ng-click="onAddRoomType()">Add</button> 
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Square Footage</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="data in Room.RoomDetails">
+                                    <th scope="row">{{$index + 1}}</th>
+                                    <td>
+                                        <select class="form-control" 
+                                            ng-model="data.RoomTypeId"
+                                            ng-options="bd.Name for bd in RoomTypeList">
+                                            <option selected>Select</option>
+                                    </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" ng-model="data.SquareFootage" placeholder="SquareFootage" autocomplete="off"/>
+                                    </td>
+                                    <td><button type="button" class="btn btn-danger" ng-click="onRemoveRow($index)">Remove</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" ng-click="onClickAdd()">Save</button>
+                        <button type="button" class="btn btn-secondary" ng-click="onClickCloseModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

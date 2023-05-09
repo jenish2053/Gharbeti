@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<script src="~/js/Angularjs/angular.min.js"></script>
+<script src="~/js/DataTable/ui-bootstrap-tpls.min.js"></script>
+<script src="~/js/Angularjs/angular-ui-utils.min.js"></script>
+<script src="~/js/DataTable/dataTables.min.js"></script>
+<script src="~/js/DataTable/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" href="~/css/datatable/dataTables.min.css">
+<script src="~/js/StripePayment/Index.js"></script>
+
+<div ng-app="expenseTypeIndex" ng-controller="formController as ctrl"
+     ng-init="init(
+    @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["PaymentList"])
+     )" ng-cloak>
+    <div asp-validation-summary="None"></div>
+    <div class="box">
+        <div class="box-header with-border">
+
+            <table class="table table-fixed table-striped table-bordered datatable"
+                   ui-jq="dataTable" ui-options="dataTableOpt">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Tenant</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>TransactionDate</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in PaymentList.records">
+                        <td>{{data.Tenant}}</td>
+                        <td>{{data.StartDate}}</td>
+                        <td>{{data.EndDate}}</td>
+                        <td>{{data.TransactionDate}}</td>
+                        <td>{{data.Amount}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      
+    </div>
+
+</div>
+
